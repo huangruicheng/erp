@@ -1,0 +1,10 @@
+package cn.java.service;
+
+import cn.java.model.Demo;
+import cn.java.query.DemoQuery;
+
+public interface DemoService extends BaseService<Demo, DemoQuery> {
+	
+	
+
+}

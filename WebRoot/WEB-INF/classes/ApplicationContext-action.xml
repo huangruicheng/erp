@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="http://www.springframework.org/schema/beans            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd            http://www.springframework.org/schema/context            http://www.springframework.org/schema/context/spring-context-3.2.xsd            http://www.springframework.org/schema/tx            http://www.springframework.org/schema/tx/spring-tx-3.2.xsd            http://www.springframework.org/schema/aop            http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">  
+  <bean id="empAction" class="cn.java.controller.EmpAction" scope="prototype"> 
+    <property name="empService" ref="empService"/>  
+    <property name="depService" ref="depService"/> 
+  </bean>  
+  <bean id="depAction" class="cn.java.controller.DepAction" scope="prototype"> 
+    <property name="depService" ref="depService"/> 
+  </bean>  
+  <bean id="roleAction" class="cn.java.controller.RoleAction" scope="prototype"> 
+    <property name="roleService" ref="roleService"/> 
+     <property name="menuService" ref="menuService"/> 
+  </bean>  
+  <bean id="supplierAction" class="cn.java.controller.SupplierAction" scope="prototype"> 
+    <property name="supplierService" ref="supplierService"/> 
+  </bean>  
+  <bean id="productTypeAction" class="cn.java.controller.ProductTypeAction" scope="prototype"> 
+    <property name="productTypeService" ref="productTypeService"/>  
+    <property name="supplierService" ref="supplierService"/> 
+  </bean>  
+  <bean id="menuAction" class="cn.java.controller.MenuAction" scope="prototype"> 
+    <property name="menuService" ref="menuService"/> 
+  </bean>  
+<!--   <bean id="storeAction" class="cn.java.controller.StoreAction" scope="prototype"> 
+    <property name="storeService" ref="storeService"/> 
+  </bean>   -->
+  <bean id="resourceAction" class="cn.java.controller.ResourceAction" scope="prototype"> 
+    <property name="resourceService" ref="resourceService"/> 
+  </bean>  
+  <bean id="productAction" class="cn.java.controller.ProductAction" scope="prototype"> 
+    <property name="productService" ref="productService"/>  
+    <property name="supplierService" ref="supplierService"/>  
+    <property name="productTypeService" ref="productTypeService"/> 
+  </bean>  
+  <bean id="orderModelAction" class="cn.java.controller.OrderModelAction" scope="prototype"> 
+    <property name="orderModelService" ref="orderModelService"/>  
+    <property name="supplierService" ref="supplierService"/>  
+    <property name="orderDetailService" ref="orderDetailService"/>  
+    <property name="productService" ref="productService"/> 
+  </bean>  
+  <bean id="tranOrderModelAction" class="cn.java.controller.TranOrderModelAction" scope="prototype"> 
+    <property name="orderModelService" ref="orderModelService"/>  
+    <property name="supplierService" ref="supplierService"/>  
+    <property name="depService" ref="depService"/>  
+    <property name="empService" ref="empService"/> 
+  </bean>  
+  <bean id="orderDetailAction" class="cn.java.controller.OrderDetailAction" scope="prototype"> 
+    <property name="orderDetailService" ref="orderDetailService"/> 
+  </bean>  
+  <bean id="consoleLogAction" class="cn.java.controller.ConsoleLogAction" scope="prototype"> 
+    <property name="consoleLogService" ref="consoleLogService"/> 
+  </bean>  
+  <bean id="storeAction" class="cn.java.controller.StoreAction" scope="prototype"> 
+    <property name="storeService" ref="storeService"/> 
+  </bean>  
+  <bean id="storeDetailAction" class="cn.java.controller.StoreDetailAction" scope="prototype">
+    <property name="storeDetailService" ref="storeDetailService"/>
+  </bean>
+</beans>

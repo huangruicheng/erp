@@ -1,0 +1,11 @@
+package cn.java.dao;
+
+import cn.java.model.Demo;
+import cn.java.query.DemoQuery;
+
+public interface DemoDao extends BaseDao<Demo, DemoQuery> {
+	
+	
+	
+
+}
